@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualização da Base de Dados</title>
+    <style>
+        table { max-width: 100%; border-collapse: collapse; margin: 20px auto; }
+        th, td { border: 1px solid black; padding: 10px; text-align: center; }
+        th { background-color: #ddd; }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Registros da Base de Dados</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>URL Longa</th>
+                <th>Código Curto</th>
+                <th>Data de Criação</th>
+                <th>Cliques</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registro in registros %}
+            <tr>
+                <td>{{ registro[0] }}</td>  <!-- ID -->
+                <td>{{ registro[1] }}</td>  <!-- URL Longa -->
+                <td>{{ registro[2] }}</td>  <!-- Código Curto -->
+                <td>{{ registro[3] }}</td>  <!-- Data de Criação -->
+                <td>{{ registro[4] }}</td>  <!-- Cliques -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

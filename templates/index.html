@@ -5,6 +5,16 @@
     <title>Encurtador de URLs</title>
 </head>
 <body>
+    <h1>Encurtador de URL's</h1>
+    <form method="POST">
+        <label for="long_url"> URL longa:</label>
+        <input type="text" name="long_url" id="long_url" required>
+        <button type="submit">Encurtar</button>
+    </form>
 
-</body>
+    {% if short_url %}
+        <p>Sua URL encurtada: <a href="{{ short_url }}">{{ short_url }}</a></p>
+    {% endif %}
+
+        <a href="/database">Ver registros da base de dados</a></body>
 </html>
